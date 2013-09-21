@@ -35,6 +35,10 @@ function WebServer(optionsPath) {
         self.torrentClient = new Client(self.options);
     });
 
+    if (!fs.existsSync('logs')){
+        fs.mkdirSync('logs');
+    }
+
     log4js.configure({
         appenders: [
             { type: 'file', filename: 'logs/root.log', maxLogSize: 20480, backups: 0},
