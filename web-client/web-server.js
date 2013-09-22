@@ -280,6 +280,7 @@ WebServer._torrentStripFat = function (torrent) {
     json.progress = (torrent.stats.downloaded / torrent.size * 100) || 0;
     json.downloadRate = torrent.stats.downloadRate;
     json.uploadRate = torrent.stats.uploadRate;
+    json.status = torrent.status;
 
     return json;
 };

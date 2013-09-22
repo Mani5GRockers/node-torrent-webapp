@@ -22,7 +22,9 @@
         <td>{{torrent.downloadRate | speed }}</td>
         <td class="hidden-phone">{{torrent.uploadRate | speed}}</td>
         <td class="hidden-phone">{{torrent.estimated}}</td>
-        <td><i class="icon-pause"></i></td>
+        <td><a><i ng-class="{   'torrent:ready' : 'icon-pause',
+                                'torrent:loading' : 'icon-pause',
+                                'torrent:stopped' :'icon-play'}[torrent.status]"></i></a></td>
     </tr>
     <tr ng-show="!torrents.length">
         <td colspan="7">Click "Add torrent" to download...</td>
