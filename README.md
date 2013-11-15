@@ -12,15 +12,15 @@ An angular.js web application for node-torrent
   * Add torrent via URL (file:, https:, http:, magnet:)
   * Simple web server that runs locally and hosts web interface
   * Mobile support
+  * Pause/Resume Torrent
 
 ## In progress
-  * Pause/Resume Torrent
+  * Persistency
 
 ## TODO
   * Share ratio
   * Accurate reporting on download/upload speeds
   * Limit download/upload speeds
-  * Persist?
   * Secure login and mac address filtering
   * dyndns.com integrated support for remote controlling the app.
 
