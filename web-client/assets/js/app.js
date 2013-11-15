@@ -1,5 +1,5 @@
 'use strict';
-var app = angular.module('web-client', ['connection', 'byte-filters', '$strap.directives']).
+var app = angular.module('web-client', ['connection', 'byte-filters', '$strap.directives', 'ngRoute']).
     config(function ($routeProvider, $locationProvider) {
         $routeProvider.
             when('/', {controller: ListCtrl, templateUrl: 'partials/list.html'}).
@@ -22,6 +22,9 @@ function ListCtrl($scope, $timeout, Torrents) {
     if (!queryPromise) {
         queryPromise = $timeout(timedQuery, 1000);
     }
+
+    $scope.toggle = Torrents.toggle;
+    $scope.remove = Torrents.delete;
 }
 
 function PrefsCtrl($scope, $location, Options) {
