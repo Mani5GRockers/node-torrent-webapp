@@ -2,15 +2,28 @@ body {
     box-sizing: inherit;
     text-align: center;
     background: #A0F06C;
+    height: 100%;
 }
 
 header {
     text-align: center;
+    color: #ffffff;
+}
+
+form {
+    color: #ffffff;
+}
+
+legend {
+    color: #ffffff;
 }
 
 #wrapper {
     margin: auto auto;
     text-align: left;
+    max-width: 1000px;
+    background-image: url('/img/wood_texture1758.jpg');
+    height: 100%;
 }
 
 .table th,
